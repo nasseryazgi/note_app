@@ -7,7 +7,7 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 24,bottom: 24,left: 16),
+      padding: EdgeInsets.only(top: 24, bottom: 24, left: 16),
       width: double.infinity,
       decoration: BoxDecoration(
           color: Color(0xffFFCC80), borderRadius: BorderRadius.circular(16)),
@@ -22,11 +22,11 @@ class NoteItem extends StatelessWidget {
               style: TextStyle(fontSize: 26, color: Colors.black),
             ),
             subtitle: Padding(
-              padding: const EdgeInsets.only(top: 16,bottom: 16),
+              padding: const EdgeInsets.only(top: 16, bottom: 16),
               child: Text(
                 'Build your Career With\n Nasser Al Yazgi',
-                style:
-                TextStyle(fontSize: 18, color: Colors.black.withOpacity(.5)),
+                style: TextStyle(
+                    fontSize: 18, color: Colors.black.withOpacity(.5)),
               ),
             ),
             trailing: IconButton(
@@ -41,7 +41,8 @@ class NoteItem extends StatelessWidget {
             padding: const EdgeInsets.only(right: 24.0),
             child: Text(
               'May21 , 2022',
-              style: TextStyle(fontSize: 16, color: Colors.black.withOpacity(.5)),
+              style:
+                  TextStyle(fontSize: 16, color: Colors.black.withOpacity(.5)),
             ),
           )
         ],
