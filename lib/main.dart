@@ -21,9 +21,7 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => AddNotesCubit(),
-        ),
+        BlocProvider(create: (context) => AddNotesCubit(),),
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
