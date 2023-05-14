@@ -682,4 +682,9 @@ packages:
     description:
       name: yaml
       sha256: "23812a9b125b48d4007117254bca50abb6c712352927eece9e155207b1db2370"
-      url: "https://pu
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
+sdks:
+  dart: ">=3.0.0-0 <4.0.0"
+  flutter: ">=3.3.0"
