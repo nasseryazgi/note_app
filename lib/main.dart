@@ -11,7 +11,7 @@ import 'cubits/add_notes_cubit.dart';
 void main() async {
   Bloc.observer=SimpleBlockObsever();
   await Hive.initFlutter();
-  await Hive.openBox(kNotesbox);
+  await Hive.openBox<NoteModel>(kNotesbox);
   Hive.registerAdapter(NoteModelAdapter());
   runApp(const NotesApp());
 }
