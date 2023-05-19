@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../models/note_model.dart';
 import '../widgets/edit_viewbody.dart';
 
 class EditNoteView extends StatelessWidget {
-  const EditNoteView({Key? key}) : super(key: key);
-
-  @override
+  const EditNoteView({Key? key,  required  this.note}) : super(key: key);
+  final NoteModel note;
   Widget build(BuildContext context) {
-    return  const Scaffold(
-      body: EditNoteViewBody(),
+    return  Scaffold(
+      body: EditNoteViewBody(note: note),
     );
   }
 }
