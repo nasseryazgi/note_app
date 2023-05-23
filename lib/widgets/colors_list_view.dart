@@ -1,14 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/cubits/add_notes_cubit.dart';
 
 class ColorItem extends StatelessWidget {
-   ColorItem({Key? key, required this.isActive, required this.color}) : super(key: key);
+  ColorItem({Key? key, required this.isActive, required this.color})
+      : super(key: key);
   final bool isActive;
-final Color color;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return isActive
-        ?  CircleAvatar(
+        ? CircleAvatar(
             radius: 38,
             backgroundColor: Colors.white,
             child: CircleAvatar(
@@ -16,7 +19,7 @@ final Color color;
               backgroundColor: color,
             ),
           )
-        :  CircleAvatar(
+        : CircleAvatar(
             radius: 38,
             backgroundColor: color,
           );
@@ -24,7 +27,6 @@ final Color color;
 }
 
 class ClorsListView extends StatefulWidget {
-
   ClorsListView({
     Key? key,
   }) : super(key: key);
@@ -36,7 +38,7 @@ class ClorsListView extends StatefulWidget {
 class _ClorsListViewState extends State<ClorsListView> {
   int currentIndex = 0;
   List<Color> color = const [
-     Color(0xff89A2DC),
+    Color(0xff89A2DC),
     Color(0xff3066DC),
     Color(0xff1F1F4B),
     Color(0xff4D408B),
@@ -57,9 +59,11 @@ class _ClorsListViewState extends State<ClorsListView> {
                 onTap: () {
                   currentIndex = index;
                   setState(() {});
+                  BlocProvider.of<AddNotesCubit>(context).color = color[index];
                 },
                 child: ColorItem(
-                  isActive: currentIndex == index, color: color[index],
+                  isActive: currentIndex == index,
+                  color: color[index],
                 ),
               ),
             );
