@@ -48,9 +48,12 @@ class _addNoteFromState extends State<addNoteFrom> {
             maxLines: 5,
           ),
           const SizedBox(
-            height: 32,
+            height: 22,
           ),
           ClorsListView(),
+          const SizedBox(
+            height: 22,
+          ),
           BlocBuilder<AddNotesCubit, AddNotesState>(
             builder: (context, state) {
               return CustomBottom(
